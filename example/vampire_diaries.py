@@ -5,5 +5,5 @@ VD = {
     "Caroline": {"age": 22, "ex": ["Matt", "Tyler", "Klause", "Stefan"], "species": "Vampire"},
     "Bonnie": {"age": 22, "ex": ["Jeremy", "Enzo"], "species": "Witch"},
     "Matt": {"age": 22, "ex": ["Elena", "Caroline", "Rebeka"], "species": "Human"},
-
+    
 }

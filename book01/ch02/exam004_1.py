@@ -22,3 +22,7 @@ print(a, type(a), id(a))
 print(b, type(b), id(b))
 print(c, type(c), id(c))
 print(d, type(d), id(d))
+
+# 결과: 전부 같은 객체를 참조하기 때문에 객체 ID가 같다.
+# 값을 변경할 수 없는 객체가 여러 번 등장할 경우 
+# 메모리에 보관해뒀다가 재사용하도록 컴파일 최적화를 수행.

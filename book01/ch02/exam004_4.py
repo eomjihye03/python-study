@@ -1,29 +1,46 @@
-# 기타 객체 캐싱 
-# - 값을 변경할 수 있는(mutable) 객체는 캐싱 X
-#      => list, set, dict, ...
-# - 값을 변경할 수 없는(immutable) 객체는 캐싱 O
-#      => int, float, complex, bool, str, bytes, tuple, ...
+# 식별자 (identifier)
+# - 변수명, 함수명, 클래스명, 모듈명을 가리키는 용어.
+# - 알파벳 대소문자, 숫자, _로 작성할 수 있다.
+# - 단, 숫자는 맨 앞에 올 수 없다.
+# - 대소문자 구분.
+# - 파이썬 3.0부터 유니코드에 속한 문자는 식별자로 작성 가능.
+# - 단, 그 외 문자들은 권장 X
 
-a1 = [100, 200, 300]
-a2 = [100, 200, 300]
-print(id(a1), id(a2)) # 리스트는 캐싱 X
-                    # 리스트는 변경되기 때문.
+a = 100
+abc = 100
+abc_def = 100
+_abc = 100
 
-b1 = (100, 200, 300)
-b2 = (100, 200, 300)
-print(id(b1), id(b2)) # 튜플은 캐싱된다. 변경되지 않기 때문.
+ABC = 200
+Abc = 300
 
-c1 = {1, 2, 3}
-c2 = {1, 2, 3}
-print(id(c1), id(c2)) # 집합은 캐싱 X. 변경 가능하기 때문.
+print(abc, ABC, Abc)
 
-d1 = 3.1 + 4.5j # 리터럴로 객체 생성.
-d2 = complex(3.1 + 4.5j) # 클래스로 객체 생성.
-print(id(d1), id(d2)) # 복소수는 캐싱 O
+# 1abc = 100 (오류)
 
-e1 = {'name': 'Damon', 'age': '172'}
-e2 = {'name': 'Damon', 'age': '172'}
-print(id(e1), id(e2))
+가나다 = 100
+print(가나다)
 
+# _%%% = 100
+# print(_%%%) 오류
+print('*' * 100)
 
+# NFKC(Normalization Form KC) 변환
+# - 파이썬은 코드를 파싱할 때 모든 식별자를 NFKC 형식으로 변환한다. 
+# - 문자가 달라도 의미가 같으면 같은 문자로 변환한다.
 
+𝐀 = 100
+𝐴 = 200
+𝑨 = 300
+𝒜 = 400
+𝓐 = 500
+𝔄 = 600
+𝔸 = 700
+A = 800
+
+print(𝐀, 𝐴, 𝑨, 𝒜, 𝓐, 𝔄, 𝔸, A)
+
+import unicodedata
+print(unicodedata.normalize('NFKC', '𝓐'))
+print(unicodedata.normalize('NFKC', '𝔄'))
+print(unicodedata.normalize('NFKC', '𝔸'))

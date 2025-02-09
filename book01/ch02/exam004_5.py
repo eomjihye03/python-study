@@ -1,26 +1,18 @@
-# 식별자 (identifier)
-# - 변수명, 함수명, 클래스명, 모듈명을 가리키는 용어.
-# - 알파벳 대소문자, 숫자, _로 작성할 수 있다.
-# - 단, 숫자는 맨 앞에 올 수 없다.
-# - 대소문자 구분.
-# - 파이썬 3.0부터 유니코드에 속한 문자는 식별자로 작성 가능.
-# - 단, 그 외 문자들은 권장 X
+# 키워드는 식별자로 사용 X
+# ex) False None True and as assert async await 
+# break class continue def del elif else except finally 
+# for from global if import in is lambda nonlocal not or pass 
+# raise return try while with yield
 
-a = 100
-abc = 100
-abc_def = 100
-_abc = 100
+# and = 100 (X)
+# class = 200 (X)
 
-ABC = 200
-Abc = 300
 
-print(abc, ABC, Abc)
+print(abs(-100))
 
-# 1abc = 100 (오류)
-
-가나다 = 100
-print(가나다)
-
-# _%%% = 100
-# print(_%%%)
+# 기존 함수 이름을 덮어쓰지 않도록 해야 한다.
+# 파이썬은 이에 대한 방어가 없음.
+abs = 300 # 내장 함수를 식별자로 사용.
+print(abs)
+print(abs(-100)) 
 
