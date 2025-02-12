@@ -1,5 +1,6 @@
 # 클래스로 Iterator 만들기
 
+# Iterator 클래스
 class MyIterator:
     def __init__(self, obj):
         self.obj = obj
@@ -13,6 +14,7 @@ class MyIterator:
         else:
             raise StopIteration
 
+# Iterable 클래스
 class MyRange:
     def __init__(self, n):
         self.max = n

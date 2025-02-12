@@ -1,27 +1,13 @@
-# 클래스로 Iterator 만들기
-
-class MyIterator:
-    def __init__(self, obj):
-        self.obj = obj
-        self.cursor = 0
-
-    def __next__(self):
-        if self.cursor < self.obj.max:
-            value = self.cursor
-            self.cursor += 1
-            return value
-        else:
-            raise StopIteration
-
-class MyRange:
-    def __init__(self, n):
-        self.max = n
+# generator로 Iterator 만들기
+def MyRange(n):
+    cursor = 0
+    while cursor < n:
+        yield cursor # 자동으로 generator가 되게 함.
+        cursor += 1
+# 단축코드!!!! 코드 최적화. 프레임 워크.
     
-    def __iter__(self):
-        return MyIterator(self)
-    
-
-my_range = MyRange(5)
+my_range = MyRange(5) # generator: iterable 객체
+print(type(my_range))
 my_iterator = my_range.__iter__()
 print(my_iterator.__next__())
 print(my_iterator.__next__())
@@ -29,7 +15,6 @@ print(my_iterator.__next__())
 print(my_iterator.__next__())
 print(my_iterator.__next__())
 print(my_iterator.__next__())
-
 
 my_range = MyRange(5)
 my_iterator = iter(my_range)
