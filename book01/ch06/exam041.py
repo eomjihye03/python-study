@@ -1,35 +1,37 @@
-# list() - 사용자 정의 클래스
+# map(func, iterable)
+#   . iterable 객체의 값을 꺼내서 func으로 가공한 후 값을 리턴하는 역할.
 
-class Car:
-    def __init__(self, model, maker, cc):
-        self._model = model
-        self._maker = maker
-        self._cc = cc
-        self._cursor = 0
-    
-    def __str__(self):
-        return f'{self._model}, {self._maker}, {self._cc}'
+a = [1, 2, 3, 4, 5]
 
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        print("__next__() 호출!!!")
-        self._cursor += 1
-        match (self._cursor):
-            case 1:
-                return self._model
-            case 2:
-                return self._maker
-            case 3:
-                return self._cc
-            case _:
-                raise StopIteration
+# 1) 값을 처리하는 함수를 따로 정의
+def power(x):
+    return x * x
 
 
-    
+power_map = map(power, a) # iterable 객체 값을 꺼내서 함수로 처리
+print(type(power_map))
 
-c1 = Car('소나타', '현대자동차', 1980)
-print(c1)
+# map은 iterator 역할 수행한다.
+# print(iter.__next__())
+# print(iter.__next__())
+# print(iter.__next__())
+# print(iter.__next__())
+# print(iter.__next__())
+# print(iter.__next__())
 
-print(list(c1))
+print(list(power_map))
+
+# 2) 값을 처리하는 함수를 람다(lambda)로 정의
+#   . lambda: 함수의 간결한 문법
+
+power_map2 = map(lambda x: x * x, a)
+print(list(power_map2))
+
+# 3) 두 개의 리스트를 처리하기
+a = ['사과', '배', '복숭아']
+b = [2000, 3000, 1500]
+
+prod_map = map(lambda x, y: (x, y), a, b)
+print(list(prod_map))
+
+# map 없이 구현하려면??

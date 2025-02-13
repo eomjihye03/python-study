@@ -8,6 +8,13 @@ b = [2000, 3000, 1500, 2300]
 c = [100, 20, 50]
 
 prods = zip(a, b, c)
+prods_iterator = prods.__iter__()
+prods_next = prods.__next__()
+prods_next = prods.__next__()
+prods_next = prods.__next__()
+prods_next = prods.__next__() # StopIteration (정상적인 종료)
+
+
 print(type(prods))
 print(isinstance(prods, Iterable))
 print(list(prods))
@@ -19,7 +26,7 @@ prods_iterator = prods.__iter__()
 prods_next = prods.__next__()
 prods_next = prods.__next__()
 prods_next = prods.__next__()
-prods_next = prods.__next__()
+prods_next = prods.__next__() # ValueError (비정상적인 종료)
 print(list(prods))
 
 ########## zip 상태에서는 오류가 안나는데?

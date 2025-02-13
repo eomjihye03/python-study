@@ -1,24 +1,20 @@
-# 리스트로 큐 구현
+# 튜플 이해하기
 
-from collections import deque 
+t1 = ('Damon', 172, False)
+print(type(t1), t1)
 
-myqueue = deque([])
+t1 = 'Elena', 22, False # 튜플은 괄호 생략 가능.
+print(type(t1), t1)
 
-def offer(value):
-    myqueue.append(value)
+# tuple unpacking I
+name, age, working = t1
+print(name, age, working)
 
-def poll():
-    if len(myqueue) == 0:
-        return None
-    return myqueue.popleft()
+# tuple unpacking II
+name, age, working = 'Stefan', 166, False
+print(name, age, working)
 
-offer("Damon")
-offer("Elena")
-offer("Matt")
+name, _, working = 'Stefan', 166, False
+print(name, working)
 
-print(myqueue)
-
-
-while value := poll(): # Boolean context
-    print(value)
-
+t1[1] = 40 # tuple은 immutable 객체다.

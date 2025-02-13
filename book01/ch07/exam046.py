@@ -1,29 +1,13 @@
-# 시퀀스 자료형
-#   . Sequence 서브 타입 객체
-#   예) str, bytes, memoryview, array.array, bytearray, tuple, list
-#   . 특징
-#       . 인덱싱(0, 1, 2,...)
-#       . 슬라이싱(:)
-#       . 연결(+)
-#       . 반복(*)
-#       . 멤버(in) --> 존재 유무 검사
-#       . 크기(len)
+# 순차적 정수열 만들기: range()
 
+a = range(10)
+print(list(a))
 
+print(list(range(0, 3)))
+print(list(range(3, 7)))
+print(list(range(7, 10)))
 
-from collections.abc import Sequence
-from array import array
+print(list(range(2, 20, 3)))
 
-# (immutable)Sequence
-print(issubclass(str, Sequence))
-print(issubclass(bytes, Sequence))
-print(issubclass(memoryview, Sequence))
-print(issubclass(tuple, Sequence))
-print(issubclass(range, Sequence))
-
-# MutableSequence
-print(issubclass(array, Sequence))
-print(issubclass(bytearray, Sequence))
-print(issubclass(list, Sequence))
-
-
+# list comprehension
+print([x for x in range(1, 10, 2)])
