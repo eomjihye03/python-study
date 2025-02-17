@@ -1,4 +1,4 @@
-# __str__() vs __repr__()
+# f'' - !s, !r, !a 사용법
 
 class Car:
     def __init__(self, model, maker, cc):

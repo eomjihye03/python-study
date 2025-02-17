@@ -14,4 +14,7 @@ print('Hello, "Brother"')
 print('Hello, \'Brother\'')
 print("Hello, 'Brother'")
 print("Hello, \"Brother\"")
-print("A\101\377") # code point(8진수) 0 ~ 377
+print("A\101\377") # code point(8진수) 0 ~ 377 => REPL 환경에서는 0~377 유효.
+print("\N{SMILING FACE WITH SUNGLASSES}") # \N{문자에 부여된 이름}
+print('\u0041\uac00') # \uxxxx (16진수 unicode code point)
+print('\U0001f495') # \Uxxxxxxxx (4바이트 16진수 unicode code point)
