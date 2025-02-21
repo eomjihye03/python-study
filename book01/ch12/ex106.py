@@ -10,5 +10,5 @@ print(d2.get(12))
 print(d.get('gender')) # 존재하지 않은 key는 에러.
 print(d2.get(100))
 
-print(d.get('name', 'No name'))
+print(d.get('name', 'No name')) # 'name'이 없으면 'No name'이라고 출력.
 print(d.get('gender', 'Woman'))

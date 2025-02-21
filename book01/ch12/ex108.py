@@ -17,6 +17,7 @@ for k, v in zip(key_list, value_list): # 두 리스트의 각 항목을 튜플�
     d2[k] = v
 print(d2)
 
+
 d2 = {}
 for k in d: # dict에서 key를 꺼낸다.
     d2[k] = d[k]

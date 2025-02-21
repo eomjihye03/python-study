@@ -1,7 +1,10 @@
 # 바이트 문자열 이해하기
+#   . 바이트 값을 문자열로 표현한 것
+#   . 0x00 ~ 0x7f (ASCII) : 문자 그대로 표현
+#   . 0x80 ~ 0xFF (non-ASCII) : \xHH 형식으로 표현. HH는 16진수.
 
-s = "ABCabc"
-b = b"ABCabc"
+s = "ABCabc" # 문자열 
+b = b"ABCabc" # 바이트 문자열
 print(s[0], b[0])
 
 print(type(s[0]), type(b[0]))

@@ -20,3 +20,8 @@ gender = d.setdefault('gender', 'Woman') # name 값 꺼내기
 print(gender)
 print(d)
 
+# key에 해당하는 값이 있으면 
+d = {'name': 'Elena', 'age': 22, 'working': True}
+name = d.setdefault('name', 'No name') # name 값 꺼내기
+print(gender)
+print(d)

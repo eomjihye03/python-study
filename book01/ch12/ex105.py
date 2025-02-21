@@ -1,4 +1,4 @@
-# 딕셔너리에서 값 추출하기
+# 딕셔너리에서 값 추출하기 1
 # d[key]
 
 d = {'name': 'Elena', 'age': 22, 'working': True}

@@ -1,8 +1,13 @@
-# 딕셔너리 키 존재 확인
+# 딕셔너리 모든 키로 iterator 생성
 
 d = {'name': 'Elena', 'age': 22, 'working': True}
-print('age' in d)
-print('ninano' in d)
+i = iter(d) # __iter__() 호출
+print(type(i), i)
 
-print('age' not in d)
-print('ninano' not in d)
+
+for key in i:
+    print(key)
+
+d.clear()
+print(d)
+

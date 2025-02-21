@@ -1,22 +1,23 @@
-# 지연변수와 전역변수: global
+# 함수 처리 결과 리턴
+# return
 
-a = 100
-def f1(a): # 파라미터도 지역 변수이다.
-    a += 100
-    print(a)
+# 1)
+def reverse(*names):
+    result = []
+    index = len(names) - 1
+    while index >= 0:
+        result.append(names[index])
+        index -= 1
+    return result
 
-f1(a)
-print(a)
+# 2)
+def reverse(*names):
+    result = []
+    index = len(names)
+    while index > 0:
+        result.append(names[index := index - 1])
+    return result
 
-def f2():
-    a = 300 # 로컬 변수
 
-f2() # 로컬 별수는 함수 호출 종료시 제거된다.
-print(a)
-
-# 함수에서 전역변수 사용하기
-def f3():
-    global a # a는 전역변수임을 선언한다.
-    a = 300
-f3()
-print(a)
+r = reverse('Damon', 'Stefan', 'Klause')
+print(r)

@@ -1,8 +1,11 @@
-# 딕셔너리 키 존재 확인
+# 딕셔너리로 모든 요소 복제
+# shallow copy
 
-d = {'name': 'Elena', 'age': 22, 'working': True}
-print('age' in d)
-print('ninano' in d)
+d = {'name': 'Damon', 'age': 172, 'working': False}
 
-print('age' not in d)
-print('ninano' not in d)
+d2  = d.copy()
+d['name'] = 'Stefan'
+d2['name'] = 'Elena'
+
+print(d)
+print(d2)
