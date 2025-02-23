@@ -1,0 +1,14 @@
+{
+    "title": "자바 웹 개발 워크북",
+    "press": "프리렉",
+    "author": {
+        "name": "엄진영",
+        "email": "jinyoung.eom@gmail.com"
+    },
+    "price": 38000,
+    "tags": [
+        "자바",
+        "웹",
+        "프로그래밍"
+    ]
+}

@@ -9,6 +9,8 @@ void * foo() {
     return NULL;
 }
 
+// 세 개의 스레드 모두 각기 다른 스레드지만, 이들은 모두 동일한 프로세스를 공유하고 있다.
+
 int main()
 {
     pthread_t thread1;

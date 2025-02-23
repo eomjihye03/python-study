@@ -1,0 +1,12 @@
+{
+    "name": "데이먼",
+    "age": 172,
+    "alies": [
+        "jerk",
+        "idiot"
+    ],
+    "score": {
+        "kor": 10,
+        "eng": 100
+    }
+}

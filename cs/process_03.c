@@ -4,7 +4,7 @@
 // 동일한 작업(foo 함수 실행)을 수행토록 자식 프로세스를 생성할 수도 있다.
 
 void foo() {
-    printf("executed foo()!!!\n");
+    printf("execute foo()!!!\n");
 }
 
 int main()

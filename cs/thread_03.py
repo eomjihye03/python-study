@@ -26,3 +26,4 @@ if __name__ == '__main__':
     thread3 = threading.Thread(target=baz).start()
 
 # 세 개의 스레드 모두 각기 다른 스레드지만, 이들은 모두 동일한 프로세스를 공유하고 있다.
+# 하나의 프로세스 내에 여러 개의 실행 흐름을 만들어낼 수 있다.
